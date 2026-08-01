@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans bg-slate-950 text-slate-100 min-h-screen overflow-x-hidden;
+  }
+}
+
+/* Glassmorphism effects */
+.glass-panel {
+  @apply bg-slate-900/60 backdrop-blur-xl border border-slate-800/80 shadow-xl shadow-black/20;
+}
+
+.glass-panel-hover {
+  @apply glass-panel transition-all duration-300 hover:border-brand-500/50 hover:shadow-brand-500/10 hover:-translate-y-0.5;
+}
+
+.glass-input {
+  @apply bg-slate-900/80 border border-slate-700/70 rounded-xl px-4 py-2.5 text-slate-100 placeholder-slate-400 focus:outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 transition-all;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-300 via-indigo-200 to-purple-400;
+}
+
+.gradient-button {
+  @apply bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-medium px-5 py-2.5 rounded-xl shadow-lg shadow-brand-600/25 active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
